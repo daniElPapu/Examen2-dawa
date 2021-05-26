@@ -26,6 +26,9 @@ class MongoAccountsRepository { // implement an interface
   async getOne ({id}) {
     return await this.mongoDB.get(this.collection,id)
   }
+  async getByNumero ({numero}) {
+    return await this.mongoDB.get(this.collection,null,{numero})
+  }
 }
 
 export default MongoAccountsRepository
